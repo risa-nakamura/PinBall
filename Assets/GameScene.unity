@@ -337,7 +337,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 90447388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3295fef78205e046b2968dd59de9ca8, type: 3}
+  m_Script: {fileID: 11500000, guid: cb70c3c5f65b15c48a9ad3c6b632a52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &237108236
@@ -1893,7 +1893,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932249561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3295fef78205e046b2968dd59de9ca8, type: 3}
+  m_Script: {fileID: 11500000, guid: cb70c3c5f65b15c48a9ad3c6b632a52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1998432618
@@ -1907,6 +1907,8 @@ GameObject:
   - component: {fileID: 1998432621}
   - component: {fileID: 1998432620}
   - component: {fileID: 1998432619}
+  - component: {fileID: 1998432624}
+  - component: {fileID: 1998432623}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1971,12 +1973,62 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1998432618}
   m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
-  m_LocalPosition: {x: 0, y: 12, z: -5.2}
+  m_LocalPosition: {x: 0, y: 13, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
+--- !u!114 &1998432623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998432618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32187365ced0c42219cde2b57c99b323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    threshold: 0.9
+    softKnee: 0.5
+    radius: 2
+    intensity: 0.7
+    highQuality: 1
+    antiFlicker: 0
+    dirtTexture: {fileID: 0}
+    dirtIntensity: 2.5
+  m_Shader: {fileID: 4800000, guid: e45d4f28262b04d10a075856ab5fdb5e, type: 3}
+--- !u!114 &1998432624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998432618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3ff4a1bef2e8d47a1dfb734aa54de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    reflectionSettings:
+      blendType: 0
+      reflectionQuality: 0
+      maxDistance: 100
+      iterationCount: 256
+      stepSize: 3
+      widthModifier: 0.5
+      reflectionBlur: 1
+      reflectBackfaces: 1
+    intensitySettings:
+      reflectionMultiplier: 1
+      fadeDistance: 100
+      fresnelFade: 1
+      fresnelFadePower: 1
+    screenEdgeMask:
+      intensity: 0.03
+  m_Shader: {fileID: 4800000, guid: 7e2fcc83af19e744787647ec0ac5d42c, type: 3}
 --- !u!1 &2068710791
 GameObject:
   m_ObjectHideFlags: 0
